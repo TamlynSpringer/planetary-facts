@@ -18,9 +18,9 @@
     "radius": "2,439.7 km",
     "temperature": "430 °C",
     "images": {
-      "overview": "./assets/planet-mercury.png",
-      "structure": "./assets/planet-mercury-internal.png",
-      "geology": "./assets/geology-mercury.png"
+      "overview": "./assets/1-1.png",
+      "structure": "./assets/1-2.png",
+      "geology": "./assets/1-3.png"
     }
   },
   {
@@ -42,9 +42,9 @@
     "radius": "6,051.8 km",
     "temperature": "471 °C",
     "images": {
-      "overview": "./assets/planet-venus.png",
-      "structure": "./assets/planet-venus-internal.png",
-      "geology": "./assets/geology-venus.png"
+      "overview": "./assets/2-1.png",
+      "structure": "./assets/2-2.png",
+      "geology": "./assets/2-3.png"
     }
   },
   {
@@ -58,7 +58,7 @@
       "source": "https://en.wikipedia.org/wiki/Earth#Internal_structure"
     },
     "geology": {
-      "content": "The total surface area of Earth is about 510 million km2. The continental crust consists of lower density material such as the igneous rocks granite and andesite. Less common is basalt, a denser volcanic rock that is the primary constituent of the ocean floors.",
+      "content": "The total surface area of Earth is about 510 million km². The continental crust consists of lower density material such as the igneous rocks granite and andesite. Less common is basalt, a denser volcanic rock that is the primary constituent of the ocean floors.",
       "source": "https://en.wikipedia.org/wiki/Earth#Surface"
     },
     "rotation": "0.99 days",
@@ -66,9 +66,9 @@
     "radius": "6,371 km",
     "temperature": "16 °C",
     "images": {
-      "overview": "./assets/planet-earth.png",
-      "structure": "./assets/planet-earth-internal.png",
-      "geology": "./assets/geology-earth.png"
+      "overview": "./assets/3-1.png",
+      "structure": "./assets/3-2.png",
+      "geology": "./assets/3-3-earth.png"
     }
   },
   {
@@ -90,9 +90,9 @@
     "radius": "3,389.5 km",
     "temperature": "-28 °C",
     "images": {
-      "overview": "./assets/planet-mars.png",
-      "structure": "./assets/planet-mars-internal.png",
-      "geology": "./assets/geology-mars.png"
+      "overview": "./assets/4-1.png",
+      "structure": "./assets/4-2.png",
+      "geology": "./assets/4-3.png"
     }
   },
   {
@@ -114,9 +114,9 @@
     "radius": "69,911 km",
     "temperature": "-108 °C",
     "images": {
-      "overview": "./assets/planet-jupiter.png",
-      "structure": "./assets/planet-jupiter-internal.png",
-      "geology": "./assets/geology-jupiter.png"
+      "overview": "./assets/5-1.png",
+      "structure": "./assets/5-2.png",
+      "geology": "./assets/5-3.png"
     }
   },
   {
@@ -138,9 +138,9 @@
     "radius": "58,232 km",
     "temperature": "-138 °C",
     "images": {
-      "overview": "./assets/planet-saturn.png",
-      "structure": "./assets/planet-saturn-internal.png",
-      "geology": "./assets/geology-saturn.png"
+      "overview": "./assets/6-1.png",
+      "structure": "./assets/6-2.png",
+      "geology": "./assets/6-3.png"
     }
   },
   {
@@ -162,9 +162,9 @@
     "radius": "25,362 km",
     "temperature": "-195 °C",
     "images": {
-      "overview": "./assets/planet-uranus.png",
-      "structure": "./assets/planet-uranus-internal.png",
-      "geology": "./assets/geology-uranus.png"
+      "overview": "./assets/7-1.png",
+      "structure": "./assets/7-2.png",
+      "geology": "./assets/7-3.png"
     }
   },
   {
@@ -186,9 +186,9 @@
     "radius": "24,622 km",
     "temperature": "-201 °C",
     "images": {
-      "overview": "./assets/planet-neptune.png",
-      "structure": "./assets/planet-neptune-internal.png",
-      "geology": "./assets/geology-neptune.png"
+      "overview": "./assets/8-1.png",
+      "structure": "./assets/8-2.png",
+      "geology": "./assets/8-3.png"
     }
   }
 ]

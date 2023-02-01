@@ -19,7 +19,7 @@ const PlanetFacts = ({ onClick, planet, wiki, planetData, setSelectedWiki }: Pla
   return (
     <>
     <main className='text-white h-auto'>
-      <div>
+      <section>
         <div className='h-full'>
           <img 
           className='h-80'
@@ -40,7 +40,13 @@ const PlanetFacts = ({ onClick, planet, wiki, planetData, setSelectedWiki }: Pla
           </button>
           ))}
         </div>   
-      </div>
+      </section>
+      <section>
+        <p>{planetData?.revolution}</p>
+        <p>{planetData?.rotation}</p>
+        <p>{planetData?.radius}</p>
+        <p>{planetData?.temperature}</p>
+      </section>
 
       {/* <Accordion planetData={planetData} planet={planet} wiki={wiki} />    */}
     </main>
