@@ -27,26 +27,18 @@ const getData = async (planet: string) => {
 
 let image;
 
-const getInternalImage = (wiki: Wiki, planetData?: PlanetData) => {
-  if (wiki === Wiki.STRUCTURE) {
-    image = planetData?.images.internal;
-    return image?.replace('.', '');
+const getImage = (wiki: Wiki, planetData?: PlanetData) => {
+  if (wiki === Wiki.structure) {
+    image = planetData?.images.structure;
+    return image;
   }
+  if (wiki === Wiki.geology) {
+    image = planetData?.images.geology;
+    return image;
+  }
+  return image = planetData?.images.overview
 };
 
-const getPlanetImage = (wiki: Wiki, planetData?: PlanetData) => {
-  if (wiki === Wiki.OVERVIEW) {
-    image = planetData?.images.planet
-    return image?.replace('.', '');
-  }
-};
-
-const getSurfaceImage = (wiki: Wiki, planetData?: PlanetData) => {
-  if (wiki === Wiki.SURFACE) {
-    image = planetData?.images.geology
-    return image?.replace('.', '');
-  }
-};
 
 const getRadius = (planetData?: PlanetData) => {
   const radius = planetData?.radius.match(/\d+/g)?.[0];
@@ -54,18 +46,16 @@ const getRadius = (planetData?: PlanetData) => {
 };
 
 const getWikiInfo = (wiki: Wiki, planetData?: PlanetData) => {
-  if (wiki === Wiki.SURFACE) {
+  if (wiki === Wiki.geology) {
     return planetData?.geology;
   }
   return planetData?.[wiki]
 };
 
 export const PlanetUtils = {
-  colors,
+    colors,
     getData,
-    getPlanetImage,
-    getInternalImage,
-    getSurfaceImage,
+    getImage,
     getRadius,
     getWikiInfo,
     options,

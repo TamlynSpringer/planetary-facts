@@ -10,9 +10,9 @@ export enum Planet {
 };
 
 export enum Wiki {
-  OVERVIEW = 'overview',
-  STRUCTURE = 'structure',
-  SURFACE = 'surface',
+  overview = 'overview',
+  structure = 'structure',
+  geology = 'geology',
 };
 
 export interface WikiInfo {
@@ -22,7 +22,7 @@ export interface WikiInfo {
 
 export interface PlanetData {
   geology: WikiInfo;
-  images: { planet: string; internal: string; geology: string };
+  images: { overview: string; structure: string; geology: string };
   name: string;
   overview: WikiInfo;
   radius: string;

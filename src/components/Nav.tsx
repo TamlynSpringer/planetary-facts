@@ -28,9 +28,8 @@ const Nav = ({ onNavigate, planet }: NavProps) => {
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}
 			id="nav"
-			className='bg-stars'
 		>
-      <div className="bg-stars z-10 max-w-screen-lg xl:max-w-screen-xl block sm:flex sm:justify-between sm:items-center">
+      <div className="z-10 max-w-screen-lg xl:max-w-screen-xl block sm:flex sm:justify-between sm:items-center">
 
 				<div className="flex justify-between items-center lg-px-10 px-2 text-2xl text-white font-extrabold lg:text-4xl">
               <Link to='/'>
@@ -71,6 +70,7 @@ const Nav = ({ onNavigate, planet }: NavProps) => {
 						<NavBurger
 						onClick={(planet: Planet) => {
 							onNavigate(`/${planet}`)
+							
 						}}
 						/>
 					</div>
