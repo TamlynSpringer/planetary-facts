@@ -1,4 +1,4 @@
-export const data =
+const data =
   {
     "name": "Mercury",
     "overview": {
@@ -22,4 +22,6 @@ export const data =
       "internal": "./assets/planet-mercury-internal.png",
       "geology": "./assets/geology-mercury.png"
     }
-  }
+  };
+
+  export default data;
