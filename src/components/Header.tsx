@@ -1,4 +1,4 @@
-import planets from '../../public/assets/solarsystem.jpg';
+import planets from '../assets/solarsystem.jpg';
 
 const Header = () => {
   return (

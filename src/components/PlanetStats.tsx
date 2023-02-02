@@ -1,7 +1,7 @@
 import { PlanetData } from '../types/planetType';
 
 export interface PlanetStatsProps {
-  planetData: PlanetData;
+  planetData: PlanetData | undefined;
 }
 
 const PlanetStats = ({planetData}: PlanetStatsProps) => {

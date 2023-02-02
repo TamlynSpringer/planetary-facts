@@ -9,7 +9,7 @@ import { PlanetUtils } from './utils/planetUtils';
 
 const App = () => {
   const [selectedPlanet, setSelectedPlanet] = useState<Planet>(Planet.MERCURY);
-  const [planetData, setPlanetData] = useState<PlanetData>();
+  const [planetData, setPlanetData] = useState<PlanetData | undefined>();
   const [selectedWiki, setSelectedWiki] = useState<Wiki>(Wiki.overview);
 
   const { planetId } = useParams();
@@ -27,16 +27,12 @@ const App = () => {
       )
   }, [selectedPlanet]);
 
-  const onClick = (e) => {
-    setSelectedWiki(e)
-  };
-
   const navigate = useNavigate();
 
   return (
     <div className='text-white w-full min-h-screen bg-starry-pattern'>
       <Nav
-      onClick={onClick}
+      onClick={event => setSelectedPlanet(event)}
       onNavigate={(path: any) => {
         navigate(path)
         setSelectedPlanet(path)
@@ -46,10 +42,11 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Home />} ></Route>
         <Route path='/:planetId' element={<PlanetFacts
-          onClick={onClick}
+          onClick={event => setSelectedWiki(event)}
           planet={selectedPlanet}
           wiki={selectedWiki}
           planetData={planetData}
+          setSelectedWiki={setSelectedWiki}
         />} ></Route>
       </Routes>     
     </div>

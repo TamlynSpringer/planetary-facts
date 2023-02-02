@@ -6,7 +6,7 @@ export interface PlanetContainerProps {
 	onClick: (wiki: Wiki) => void;
 	planet: Planet;
 	wiki: Wiki;
-  planetData: PlanetData;
+  planetData: PlanetData | undefined;
 };
 
 const PlanetContainer = ({ onClick, planet, wiki, planetData }: PlanetContainerProps) => {

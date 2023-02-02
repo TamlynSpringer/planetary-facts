@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Planet } from '../../types/planetType';
 import NavBurger from './NavBurger';
 import NavBar from './NavBar';
-import logo from './../../../public/assets/logo.png'
+import logo from './../../assets/logo.png'
 
 export interface NavProps {
 	onNavigate: (path: string) => void;
@@ -11,17 +11,8 @@ export interface NavProps {
 	onClick: (e: any) => void;
 }
 
-const Nav = ({ onNavigate, planet, onClick }: NavProps) => {
-	const [showMenu, setShowMenu] = useState<boolean>(false);
-	const [isNavOpen, setIsNavOpen] = useState(false);
-
-	function toggleMenu() {
-		if (!showMenu) {
-			setShowMenu(true);
-		} else {
-			setShowMenu(false);
-		}
-	};
+const Nav = ({ onNavigate }: NavProps) => {
+	const [isNavOpen, setIsNavOpen] = useState<boolean>(false);
 
   return (
 		<div className="flex items-center justify-between border-b border-gray-400 py-6 px-4">

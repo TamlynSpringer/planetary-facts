@@ -7,7 +7,7 @@ export interface PlanetFactsProps {
   setSelectedWiki: (value: React.SetStateAction<Wiki>) => void;
 	planet: Planet;
 	wiki: Wiki;
-  planetData: PlanetData;
+  planetData: PlanetData | undefined;
 };
 
 const PlanetFacts = ({ onClick, planet, wiki, planetData, setSelectedWiki }: PlanetFactsProps) => {
