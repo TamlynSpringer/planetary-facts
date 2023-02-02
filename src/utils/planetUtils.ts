@@ -15,7 +15,7 @@ const options = Object.values(Planet);
 const wikiOptions = Object.values(Wiki);
 
 const getData = async (planet: string) => {
-  return fetch(`${window.location.host.includes('localhost') ? '' : '/planets.netlify'}/json/data.json`, {
+  return fetch(`${window.location.host.includes('localhost') ? '' : 'planetary-facts-1337.netlify.app'}/json/data.json`, {
     headers: {
       'Content-Type': 'application/json',
       Accept: 'application/json',
