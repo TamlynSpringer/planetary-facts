@@ -1,17 +1,17 @@
-import planets from '../assets/solar-system.jpg';
+import planets from '../../public/assets/solarsystem.jpg';
 
 const Header = () => {
   return (
-    <>
-      <div className="bg-accent-dark bg-cover bg-hero">
-        <img src={planets} />
+    <header className='bg-starry-pattern w-full h-full'>
+      <div className="bg-starry-pattern min-w-full py-10">     
+        <img src={planets} alt='solar system' width='100%' />
       </div>
-      <div className="sticky top-0 right-0 bottom-0 h-full p-5 bg-opacity-50 text-left text-white bg-transparent">
+      <div className="w-full h-full p-5 bg-opacity-50 text-white bg-transparent text-center">
         <h1 className="text-3xl font-bold mt-0 mb-6 md:text-4xl lg:text-5xl bg-transparent">Welcome!</h1>
         <h3 className="text-md font-bold mb-8 md:text-lg lg:text-xl bg-transparent">On this site you'll find facts about our solar system's planets</h3>
       </div>
-    </>
+    </header>
   )
-}
+};
 
-export default Header
+export default Header;

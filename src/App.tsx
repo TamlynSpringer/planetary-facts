@@ -36,7 +36,7 @@ const App = () => {
   console.log(selectedWiki)
 
   return (
-    <div className='bg-black-600 bg-starry-pattern w-full min-h-screen'>
+    <div className='text-white w-full min-h-screen bg-starry-pattern'>
       <Nav
       onNavigate={(path: any) => {
         navigate(path)

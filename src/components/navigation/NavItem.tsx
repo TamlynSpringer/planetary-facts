@@ -8,13 +8,16 @@ export interface NavItemProps {
 }
 
 const NavItem = ({ onClick, planet }: NavItemProps) => {
+  const capitalizeFirst = (str: string) => {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  };
   return (
     <button 
     key={planet}
     onClick={onClick}
-    className='font-sans font-bold text-white text-xs uppercase relative flex justify-center place-items-center group pt-8 opacity-75 hover:opacity-100 tracking-wide'>
-      <span className={`h-1 w-full hidden ${PlanetUtils.colors[planet].accent} absolute opacity-0 top-0 transition-all ease-in-out duration-300 xl:block xl:group-hover:opacity-100 `}/>
-      {planet}
+    className='font-sans font-bold text-white text-s relative flex justify-center place-items-center group pt-8 opacity-75 hover:opacity-100 tracking-wide'>
+      <span className={`h-1 w-full ${PlanetUtils.colors[planet].accent} absolute opacity-0 top-0 transition-all ease-in-out duration-300 xl:block xl:group-hover:opacity-100 `}/>
+      {capitalizeFirst(planet)}
     </button>
   )
 }
