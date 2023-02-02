@@ -1,5 +1,6 @@
 import Accordion from "../components/Accordion";
-import Stats from "../components/Stats";
+import PlanetContainer from "../components/PlanetContainer";
+import PlanetStats from "../components/PlanetStats";
 import { Planet, PlanetData, Wiki } from "../types/planetType";
 import { PlanetUtils } from "../utils/planetUtils";
 
@@ -19,35 +20,8 @@ const PlanetFacts = ({ onClick, planet, wiki, planetData, setSelectedWiki }: Pla
   return (
     <>
     <main className='text-white h-auto'>
-      <section>
-        <div className='h-full'>
-          <img 
-          className='h-80'
-          src={`${PlanetUtils.getImage(wiki, planetData)}`}
-          alt={`${planet} ${wiki}`}
-          />
-        </div>
-          <h2>{planetData?.name}</h2>
-          <p>{`${PlanetUtils?.getWikiInfo(wiki, planetData)?.content}`}</p>
-          <p>{`${PlanetUtils?.getWikiInfo(wiki, planetData)?.source}`}</p>
-        <div>
-          {PlanetUtils.wikiOptions.map((wiki, index) => (
-          <button
-          onClick={() => onClick(wiki)}
-          key={index}
-          value={wiki}
-          >{wiki}
-          </button>
-          ))}
-        </div>   
-      </section>
-      <section>
-        <p>{planetData?.revolution}</p>
-        <p>{planetData?.rotation}</p>
-        <p>{planetData?.radius}</p>
-        <p>{planetData?.temperature}</p>
-      </section>
-
+      <PlanetContainer planetData={planetData} planet={planet} wiki={wiki} onClick={onClick} />
+      <PlanetStats planetData={planetData} />
       {/* <Accordion planetData={planetData} planet={planet} wiki={wiki} />    */}
     </main>
     </>

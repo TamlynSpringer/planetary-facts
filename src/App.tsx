@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Route, Routes, useNavigate, useParams } from 'react-router-dom';
-import Nav from './components/Nav';
+import Nav from './components/navigation/Nav';
 import Home from './pages/Home';
 import Landing from './pages/Landing';
 import PlanetFacts from './pages/PlanetFacts';

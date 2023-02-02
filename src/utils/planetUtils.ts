@@ -39,12 +39,6 @@ const getImage = (wiki: Wiki, planetData?: PlanetData) => {
   return image = planetData?.images.overview
 };
 
-
-const getRadius = (planetData?: PlanetData) => {
-  const radius = planetData?.radius.match(/\d+/g)?.[0];
-  return radius;
-};
-
 const getWikiInfo = (wiki: Wiki, planetData?: PlanetData) => {
   if (wiki === Wiki.geology) {
     return planetData?.geology;
@@ -56,7 +50,6 @@ export const PlanetUtils = {
     colors,
     getData,
     getImage,
-    getRadius,
     getWikiInfo,
     options,
     wikiOptions,
