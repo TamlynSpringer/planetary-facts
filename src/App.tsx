@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { Route, Routes, useNavigate, useParams } from 'react-router-dom';
 import Nav from './components/navigation/Nav';
 import Home from './pages/Home';
-import Landing from './pages/Landing';
 import PlanetFacts from './pages/PlanetFacts';
 import { Planet, PlanetData, Wiki } from './types/planetType';
 import { PlanetUtils } from './utils/planetUtils';
@@ -28,16 +27,16 @@ const App = () => {
       )
   }, [selectedPlanet]);
 
-  const onClick = (e: any) => {
+  const onClick = (e) => {
     setSelectedWiki(e)
   };
 
   const navigate = useNavigate();
-  console.log(selectedWiki)
 
   return (
     <div className='text-white w-full min-h-screen bg-starry-pattern'>
       <Nav
+      onClick={onClick}
       onNavigate={(path: any) => {
         navigate(path)
         setSelectedPlanet(path)
@@ -45,7 +44,6 @@ const App = () => {
       planet={selectedPlanet}
       />
       <Routes>
-        <Route path='/home' element={<Landing />} ></Route>
         <Route path='/' element={<Home />} ></Route>
         <Route path='/:planetId' element={<PlanetFacts
           onClick={onClick}

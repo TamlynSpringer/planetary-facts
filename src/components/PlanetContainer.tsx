@@ -27,7 +27,7 @@ const PlanetContainer = ({ onClick, planet, wiki, planetData }: PlanetContainerP
           <h2 className='text-4xl font-semibold'>{planetData?.name}</h2>
           <h3 className='text-2xl'>{capitalizeFirst(wiki)}:</h3>
           <p>{`${PlanetUtils?.getWikiInfo(wiki, planetData)?.content}`}</p>
-          <a href={`${PlanetUtils?.getWikiInfo(wiki, planetData)?.source}`}>Source:  Wikipedia <i className="fa-solid fa-arrow-up-right-from-square"></i></a>
+          <a href={`${PlanetUtils?.getWikiInfo(wiki, planetData)?.source}`}>Source:  Wikipedia <i className='fa-solid fa-arrow-up-right-from-square'></i></a>
           <p></p>
         </article>
       <div className='flex gap-2 md:gap-4 lg:gap-5 xl:gap-6 xl:px-5'>

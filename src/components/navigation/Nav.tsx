@@ -8,7 +8,7 @@ import logo from './../../../public/assets/logo.png'
 export interface NavProps {
 	onNavigate: (path: string) => void;
 	planet: Planet;
-	onClick: () => void;
+	onClick: (e: any) => void;
 }
 
 const Nav = ({ onNavigate, planet, onClick }: NavProps) => {
