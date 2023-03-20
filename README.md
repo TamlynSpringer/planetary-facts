@@ -1,4 +1,4 @@
-<h1 align="center">Planetary facts site</h1>
+<h1>Planetary facts site</h1>
 
 <section align='center'>
   <img src='https://gifdb.com/images/file/solar-system-palm-hand-0tytaruiyzpcw1k9.gif' alt='Solar system' />
