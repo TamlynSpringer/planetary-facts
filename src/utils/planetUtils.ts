@@ -1,4 +1,5 @@
 import { Planet, PlanetData, Wiki } from "../types/planetType";
+import data from '../assets/json/data.json';
 
 const colors: Record<Planet, Record<string, string>> = {
   mercury: { accent: 'bg-mercury-500 border-white/0', nav: 'bg-mercury-600' },
@@ -15,15 +16,19 @@ const options = Object.values(Planet);
 const wikiOptions = Object.values(Wiki);
 
 const getData = async (planet: string) => {
-  return fetch(`${window.location.host}/json/data.json`, {
-    headers: {
-      'Content-Type': 'application/json',
-      Accept: 'application/json',
-    },
-  })
-    .then((response) => response.json())
-    .then((data) => data.find((planetData: PlanetData) => planetData.name.toLowerCase() === planet));
+  return data.find((planetData: PlanetData) => planetData.name.toLowerCase() === planet);
 };
+
+// const getData = async (planet: string) => {
+//   return fetch(`${window.location.host.includes('localhost') ? '' : '/planets.netlify'}/json/data.json`, {
+//     headers: {
+//       'Content-Type': 'application/json',
+//       Accept: 'application/json',
+//     },
+//   })
+//     .then((response) => response.json())
+//     .then((data) => data.find((planetData: PlanetData) => planetData.name.toLowerCase() === planet));
+// };
 
 let image;
 

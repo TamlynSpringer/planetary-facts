@@ -33,7 +33,7 @@ const PlanetContainer = ({ onClick, planet, wiki, planetData }: PlanetContainerP
       <div className='flex gap-2 md:gap-4 lg:gap-5 xl:gap-6 xl:px-5'>
         {PlanetUtils.wikiOptions.map((wiki, index) => (
         <button
-        className='justify-between place-items-center flex-row rounded-lg mx-auto m-2 px-6 py-2.5 bg-blue-700 text-white font-medium text-md leading-tight hover:bg-blue-900 focus:bg-blue-900 focus:outline-none focus:ring-0 current:bg-blue-900 border-solid border-2 border-blue-700 hover:border-blue-900 active:border-sky-400 current:border-sky-400 transition duration-150 ease-in-out'
+        className='justify-between place-items-center flex-row md:flex-col rounded-lg mx-auto m-2 px-6 py-2.5 bg-blue-700 text-white font-medium text-md leading-tight hover:bg-blue-900 focus:bg-blue-900 focus:outline-none focus:ring-0 current:bg-blue-900 border-solid border-2 border-blue-700 hover:border-blue-900 active:border-sky-400 current:border-sky-400 transition duration-150 ease-in-out'
         onClick={() => onClick(wiki)}
         key={index}
         value={wiki}

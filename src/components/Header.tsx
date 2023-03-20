@@ -3,7 +3,7 @@ import planets from '../assets/solarsystem.jpg';
 const Header = () => {
   return (
     <header className='bg-starry-pattern w-full h-full'>
-      <div className="bg-starry-pattern min-w-full py-10">     
+      <div className="bg-starry-pattern min-w-full py-3 lg:py-10 xl:py-10">     
         <img src={planets} alt='solar system' width='100%' />
       </div>
       <div className="w-full h-full p-5 bg-opacity-50 text-white bg-transparent text-center">
